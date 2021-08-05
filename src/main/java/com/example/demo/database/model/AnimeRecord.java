@@ -15,6 +15,7 @@ public class AnimeRecord {
     @GeneratedValue
     private Long id;
     @ManyToOne
+    @JoinColumn(nullable = false)
     private Anime anime;
     private String status;
     private Float rating;

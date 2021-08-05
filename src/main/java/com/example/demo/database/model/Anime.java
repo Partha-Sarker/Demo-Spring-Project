@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public class Anime {
     @Id
     @GeneratedValue
     private Long id;
+    @Column(nullable = false)
     private String name;
     private String coverImage;
     private String type;
@@ -26,8 +28,10 @@ public class Anime {
     private Date airEndDate;
     @ManyToMany
     @JoinTable(name = "anime_genre")
-    private List<Genre> genreList = new ArrayList<>();
+    @JoinColumn(nullable = false)
+    private List<Genre> genreList;
     @ManyToMany
     @JoinTable(name = "anime_studio")
-    private List<Studio> studioList = new ArrayList<>();
+    @JoinColumn(nullable = false)
+    private List<Studio> studioList;
 }

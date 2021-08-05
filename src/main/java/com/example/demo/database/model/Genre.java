@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -14,8 +13,9 @@ public class Genre {
     @Id
     @GeneratedValue
     private Long id;
+    @Column(nullable = false)
     private String name;
     private String description;
     @ManyToMany(mappedBy = "genreList")
-    private List<Anime> animeList = new ArrayList<>();
+    private List<Anime> animeList;
 }
