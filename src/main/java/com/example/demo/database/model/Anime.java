@@ -1,5 +1,6 @@
 package com.example.demo.database.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -29,9 +30,11 @@ public class Anime {
     @ManyToMany
     @JoinTable(name = "anime_genre")
     @JoinColumn(nullable = false)
+    @JsonIgnoreProperties("animeList")
     private List<Genre> genreList;
     @ManyToMany
     @JoinTable(name = "anime_studio")
     @JoinColumn(nullable = false)
+    @JsonIgnoreProperties("animeList")
     private List<Studio> studioList;
 }

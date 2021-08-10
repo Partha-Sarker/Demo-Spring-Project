@@ -2,6 +2,7 @@ package com.example.demo.helper.dto;
 
 import com.example.demo.database.model.Genre;
 import com.example.demo.database.model.Studio;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,8 @@ public class AnimeDTO {
     private String source;
     private Date airStartDate;
     private Date airEndDate;
-    private List<Long> genreListId;
-    private List<Long> studioListId;
+    @JsonIgnoreProperties("animeList")
+    private List<Genre> genreList;
+    @JsonIgnoreProperties("animeList")
+    private List<Studio> studioList;
 }

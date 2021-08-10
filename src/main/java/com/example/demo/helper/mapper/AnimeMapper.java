@@ -11,7 +11,6 @@ import org.mapstruct.factory.Mappers;
 public interface AnimeMapper {
     AnimeMapper INSTANCE = Mappers.getMapper(AnimeMapper.class);
 
-
     AnimeDTO animeToAnimeDTO(Anime anime);
     Anime animeDTOToAnime(AnimeDTO animeDTO);
 }

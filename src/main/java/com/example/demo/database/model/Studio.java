@@ -1,5 +1,6 @@
 package com.example.demo.database.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -19,5 +20,6 @@ public class Studio {
     private String description;
     private Date foundedOn;
     @ManyToMany(mappedBy = "studioList")
+    @JsonIgnoreProperties("studioList")
     private List<Anime> animeList;
 }

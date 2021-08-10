@@ -1,5 +1,6 @@
 package com.example.demo.database.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,5 +18,6 @@ public class Genre {
     private String name;
     private String description;
     @ManyToMany(mappedBy = "genreList")
+    @JsonIgnoreProperties("genreList")
     private List<Anime> animeList;
 }

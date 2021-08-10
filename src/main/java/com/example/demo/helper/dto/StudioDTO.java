@@ -1,6 +1,7 @@
 package com.example.demo.helper.dto;
 
 import com.example.demo.database.model.Anime;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -15,5 +16,6 @@ public class StudioDTO {
     private String name;
     private String description;
     private Date foundedOn;
-    private List<Long> animeListId;
+    @JsonIgnoreProperties("studioList")
+    private List<Anime> animeList;
 }
