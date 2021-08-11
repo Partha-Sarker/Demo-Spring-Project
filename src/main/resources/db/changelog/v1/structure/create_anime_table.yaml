@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_anime_table_0
+      author: partha
+      changes:
+        - createTable:
+            tableName: anime
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: cover_image
+                  type: varchar(100)
+              - column:
+                  name: type
+                  type: varchar(25)
+              - column:
+                  name: episodes
+                  type: int
+              - column:
+                  name: duration
+                  type: int
+              - column:
+                  name: status
+                  type: varchar(25)
+              - column:
+                  name: source
+                  type: varchar(25)
+              - column:
+                  name: air_start_date
+                  type: date
+              - column:
+                  name: air_end_date
+                  type: date

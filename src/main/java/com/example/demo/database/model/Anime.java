@@ -15,9 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 public class Anime {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
+//    @Column(nullable = false)
     private String name;
     private String coverImage;
     private String type;
@@ -29,11 +29,11 @@ public class Anime {
     private Date airEndDate;
     @ManyToMany
     @JoinTable(name = "anime_genre")
-    @JoinColumn(nullable = false)
+//    @JoinColumn(nullable = false)
     @JsonIgnoreProperties("animeList")
     private List<Genre> genreList;
     @ManyToMany
-    @JoinTable(name = "anime_studio")
+//    @JoinTable(name = "anime_studio")
     @JoinColumn(nullable = false)
     @JsonIgnoreProperties("animeList")
     private List<Studio> studioList;

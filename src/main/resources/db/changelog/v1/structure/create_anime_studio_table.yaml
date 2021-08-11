@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_anime_studio_table_0
+      author: partha
+      changes:
+        - createTable:
+            tableName: anime_studio
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: anime_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: anime_studio_anime
+                    references: anime(id)
+              - column:
+                  name: studio_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: anime_studio_studio
+                    references: studio(id)

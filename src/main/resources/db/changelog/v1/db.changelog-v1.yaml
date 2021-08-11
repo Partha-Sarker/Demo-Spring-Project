@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - include:
+      file: structure/create_studio_table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: structure/create_anime_table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: structure/create_genre_table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: structure/create_anime_record_table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: structure/create_anime_studio_table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: structure/create_anime_genre_table.yaml
+      relativeToChangelogFile: true

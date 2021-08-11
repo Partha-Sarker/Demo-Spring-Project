@@ -38,6 +38,7 @@ public class GenreService {
     }
 
     public GenreDTO updateGenre(GenreDTO genreDTO) {
+        System.out.println("--------------------------- " + genreDTO);
         Genre genre = mapper.genreDTOToGenre(genreDTO);
         genre = genreRepository.save(genre);
         genreDTO = mapper.genreToGenreDTO(genre);

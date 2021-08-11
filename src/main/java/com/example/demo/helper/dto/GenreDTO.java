@@ -17,4 +17,9 @@ public class GenreDTO {
     private String description;
     @JsonIgnoreProperties("genreList")
     private List<Anime> animeList;
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

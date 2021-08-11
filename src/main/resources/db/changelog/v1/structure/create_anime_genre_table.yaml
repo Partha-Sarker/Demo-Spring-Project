@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_anime_genre_table_0
+      author: partha
+      changes:
+        - createTable:
+            tableName: anime_genre
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: anime_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: anime_genre_anime
+                    references: anime(id)
+              - column:
+                  name: genre_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: anime_genre_genre
+                    references: genre(id)

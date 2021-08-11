@@ -12,10 +12,10 @@ import java.sql.Date;
 @NoArgsConstructor
 public class AnimeRecord {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    @JoinColumn(nullable = false)
+//    @JoinColumn(nullable = false)
     private Anime anime;
     private String status;
     private Float rating;

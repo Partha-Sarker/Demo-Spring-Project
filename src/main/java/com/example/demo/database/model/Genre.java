@@ -12,9 +12,8 @@ import java.util.List;
 @NoArgsConstructor
 public class Genre {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
     private String name;
     private String description;
     @ManyToMany(mappedBy = "genreList")

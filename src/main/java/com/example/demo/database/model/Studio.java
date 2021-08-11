@@ -13,9 +13,8 @@ import java.util.List;
 @NoArgsConstructor
 public class Studio {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
     private String name;
     private String description;
     private Date foundedOn;
