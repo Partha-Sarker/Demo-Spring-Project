@@ -16,6 +16,4 @@ public class StudioDTO {
     private String name;
     private String description;
     private Date foundedOn;
-    @JsonIgnoreProperties("studioList")
-    private List<Anime> animeList;
 }

@@ -1,14 +1,10 @@
 package com.example.demo.database.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @Entity
@@ -27,14 +23,4 @@ public class Anime {
     private String source;
     private Date airStartDate;
     private Date airEndDate;
-    @ManyToMany
-    @JoinTable(name = "anime_genre")
-//    @JoinColumn(nullable = false)
-    @JsonIgnoreProperties("animeList")
-    private List<Genre> genreList;
-    @ManyToMany
-//    @JoinTable(name = "anime_studio")
-    @JoinColumn(nullable = false)
-    @JsonIgnoreProperties("animeList")
-    private List<Studio> studioList;
 }

@@ -7,13 +7,6 @@ databaseChangeLog:
             tableName: anime_studio
             columns:
               - column:
-                  name: id
-                  type: bigint
-                  autoIncrement: true
-                  constraints:
-                    nullable: false
-                    primaryKey: true
-              - column:
                   name: anime_id
                   type: bigint
                   constraints:

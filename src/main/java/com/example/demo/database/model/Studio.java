@@ -18,7 +18,4 @@ public class Studio {
     private String name;
     private String description;
     private Date foundedOn;
-    @ManyToMany(mappedBy = "studioList")
-    @JsonIgnoreProperties("studioList")
-    private List<Anime> animeList;
 }

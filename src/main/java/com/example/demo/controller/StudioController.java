@@ -2,7 +2,10 @@ package com.example.demo.controller;
 
 import com.example.demo.database.model.Studio;
 import com.example.demo.database.repository.StudioRepository;
+import com.example.demo.helper.dto.GenreDTO;
 import com.example.demo.helper.dto.StudioDTO;
+import com.example.demo.service.AnimeGenreService;
+import com.example.demo.service.AnimeStudioService;
 import com.example.demo.service.StudioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,10 +17,17 @@ import java.util.List;
 public class StudioController {
     @Autowired
     private StudioService studioService;
+    @Autowired
+    private AnimeStudioService animeStudioService;
 
     @GetMapping
     public List<StudioDTO> getStudioList() {
         return studioService.getAll();
+    }
+
+    @GetMapping("anime/{animeId}")
+    public List<StudioDTO> getStudioListByAnime(@PathVariable Long animeId) {
+        return animeStudioService.getAllStudio(animeId);
     }
 
     @GetMapping("{id}")

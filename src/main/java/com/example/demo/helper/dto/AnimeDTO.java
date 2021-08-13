@@ -24,13 +24,4 @@ public class AnimeDTO {
     private String source;
     private Date airStartDate;
     private Date airEndDate;
-    @JsonIgnoreProperties("animeList")
-    private List<Genre> genreList;
-    @JsonIgnoreProperties("animeList")
-    private List<Studio> studioList;
-
-    @Override
-    public String toString() {
-        return name;
-    }
 }
