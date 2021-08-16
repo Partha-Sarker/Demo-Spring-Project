@@ -12,5 +12,6 @@ public interface AnimeMapper {
     AnimeMapper INSTANCE = Mappers.getMapper(AnimeMapper.class);
 
     AnimeDTO animeToAnimeDTO(Anime anime);
+    @Mapping(target = "id", ignore = true)
     Anime animeDTOToAnime(AnimeDTO animeDTO);
 }
