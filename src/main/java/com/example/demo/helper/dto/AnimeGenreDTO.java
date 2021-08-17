@@ -10,6 +10,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class AnimeGenreDTO {
     private Long id;
-    private Anime anime;
-    private Genre genre;
+    private Long animeId;
+    private Long genreId;
 }

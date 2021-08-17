@@ -13,7 +13,6 @@ import java.util.List;
 @AllArgsConstructor
 public class AnimeRecordDTO {
     private Long id;
-//    @ValidAnimeId
     private Long animeId;
     private String status;
     private Float rating;

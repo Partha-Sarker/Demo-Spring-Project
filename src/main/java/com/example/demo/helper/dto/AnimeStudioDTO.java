@@ -11,6 +11,6 @@ import java.sql.Date;
 @AllArgsConstructor
 public class AnimeStudioDTO {
     private Long id;
-    private Anime anime;
-    private Studio studio;
+    private Long animeId;
+    private Long studioId;
 }
