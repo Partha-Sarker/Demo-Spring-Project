@@ -17,7 +17,6 @@ public interface AnimeRecordMapper {
     AnimeRecordMapper INSTANCE = Mappers.getMapper(AnimeRecordMapper.class);
 
     @Mapping(source = "anime.id", target = "animeId")
-   // @Mapping(source = "anime.id", target = "animeRecord.anime")
     AnimeRecordDTO animeRecordToAnimeRecordDTO(AnimeRecord animeRecord);
     @InheritInverseConfiguration
     AnimeRecord animeRecordDTOToAnimeRecord(AnimeRecordDTO animeRecordDTO);

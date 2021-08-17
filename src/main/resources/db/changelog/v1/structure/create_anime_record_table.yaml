@@ -17,7 +17,6 @@ databaseChangeLog:
                   name: anime_id
                   type: bigint
                   constraints:
-#                    nullable: false
                     foreignKeyName: fk_anime_record_anime
                     references: anime(id)
               - column:
