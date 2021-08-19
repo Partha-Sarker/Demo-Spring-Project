@@ -24,4 +24,12 @@ public class AnimeDTO {
     private String source;
     private Date airStartDate;
     private Date airEndDate;
+
+    @Override
+    public String toString() {
+        return "AnimeDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

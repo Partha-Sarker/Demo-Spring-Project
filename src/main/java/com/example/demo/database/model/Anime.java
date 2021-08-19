@@ -13,7 +13,6 @@ public class Anime {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-//    @Column(nullable = false)
     private String name;
     private String coverImage;
     private String type;
@@ -23,4 +22,12 @@ public class Anime {
     private String source;
     private Date airStartDate;
     private Date airEndDate;
+
+    @Override
+    public String toString() {
+        return "Anime{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

@@ -38,7 +38,9 @@ public class AnimeService {
     }
 
     public AnimeDTO updateAnime(AnimeDTO animeDTO) {
+        System.out.println(animeDTO.toString());
         Anime anime = mapper.animeDTOToAnime(animeDTO);
+        System.out.println(anime.toString());
         anime = animeRepository.save(anime);
         animeDTO = mapper.animeToAnimeDTO(anime);
         return animeDTO;
